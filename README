@@ -1,15 +1,26 @@
-# init-guix
+# Guix Helper scripts
+
+Set of scripts to help management of guix profiles/manifests.
+
+## Installation
+
+You may copy or symlink these scripts to locations that are included in the PATH. 
+
+## Scripts
+
+### init-guix
 
 Manage per project dependencies using guix profiles.
 
-## Description
+#### Description
 
 This script is an attempt to implement the multiple guix profiles philosophy described at https://guix.gnu.org/cookbook/en/guix-cookbook.html#Guix-Profiles-in-Practice .
 
-## Details
+#### Details
 
 The script `init_guix.sh` is used to automate the management of guix profiles from a `manifest.scm`, by
 checking for changes and updating the profile if required.
 
 If it finds a manfest.scm file in the current folder it initialises a guix profile in a folder $HOME/.guix-extra-profile and caches the md5sum of the manifest file.
 On the next call, it checks the current state and updates the profile and cache if required.
+
