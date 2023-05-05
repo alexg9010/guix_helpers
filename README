@@ -1,0 +1,15 @@
+# init-guix
+
+Manage per project dependencies using guix profiles.
+
+## Description
+
+This script is an attempt to implement the multiple guix profiles philosophy described at https://guix.gnu.org/cookbook/en/guix-cookbook.html#Guix-Profiles-in-Practice .
+
+## Details
+
+The script `init_guix.sh` is used to automate the management of guix profiles from a `manifest.scm`, by
+checking for changes and updating the profile if required.
+
+If it finds a manfest.scm file in the current folder it initialises a guix profile in a folder $HOME/.guix-extra-profile and caches the md5sum of the manifest file.
+On the next call, it checks the current state and updates the profile and cache if required.
